@@ -10,4 +10,7 @@ class Category extends Model
         'category_name',
         'slug',
     ];
+    public function registers(){
+        return $this->hasMany('App\Authentication\register');
+    }
 }

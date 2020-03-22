@@ -53,6 +53,11 @@ class authentication extends Controller
         $all = Category::select('id','category_name','slug')->get();
         return view('authentication.category_all',compact('all'));
     }
+    public function show_category($id){
+        $category = Category::with('registers')->find($id);
+        return view('authentication.category_show',compact('category'));
+    }
+
 
     public function all(){
         $all = register::select('id','category_id','name','email','age')->get();

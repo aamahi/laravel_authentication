@@ -18,6 +18,7 @@
 {{--            <th scope="col">Category</th>--}}
             <th scope="col">Category Name</th>
             <th scope="col">slug</th>
+            <th scope="col">Action</th>
         </tr>
         </thead>
         <tbody>
@@ -26,6 +27,8 @@
                 <th>{{$user->id}}</th>
                 <td>{{$user->category_name}}</td>
                 <td>{{$user->slug}}</td>
+                <td><a href="{{route('show_category',$user->id)}}" class="btn btn-success">Show</a></td>
+
             </tr>
         @endforeach
         </tbody>
