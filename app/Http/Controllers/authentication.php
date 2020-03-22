@@ -35,7 +35,10 @@ class authentication extends Controller
 
         return redirect()->back();
     }
-
+    public function category_all(){
+        $all = Category::select('id','category_name','slug')->get();
+        return view('authentication.category_all',compact('all'));
+    }
 
     public function all(){
         $all = register::select('id','name','email','age')->get();

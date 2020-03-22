@@ -23,6 +23,7 @@ Route::post('/category_add',"authentication@categoryadd");
 
 Route::get('/lgin',"authentication@login")->name('lgin');
 Route::get('/all',"authentication@all")->name('all');
+Route::get('/category_all',"authentication@category_all")->name('category_all');
 
 
 
