@@ -26,7 +26,7 @@
         @foreach($all as $user)
             <tr>
                 <th>{{$user->id}}</th>
-                <td>{{$user->category_id}}</td>
+                <td>{{$user->categories->category_name}}</td>
                 <td>{{$user->name}}</td>
                 <td>{{$user->email}}</td>
                 <td>{{$user->age}}</td>

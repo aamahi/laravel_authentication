@@ -60,7 +60,7 @@ class authentication extends Controller
 
 
     public function all(){
-        $all = register::select('id','category_id','name','email','age')->get();
+        $all = register::select('id','category_id','name','email','age')->with('categories')->get();
         return view('authentication.all',compact('all'));
     }
 }

@@ -15,4 +15,8 @@ class register extends Model
         'password',
 
     ];
+    public function categories(){
+        return $this->hasOne('App\Authentication\Category','id','category_id');
+    }
+
 }
