@@ -15,22 +15,23 @@
         <thead>
         <tr>
             <th scope="col">id</th>
-{{--            <th scope="col">Category</th>--}}
+            <th scope="col">Category</th>
             <th scope="col">Name</th>
             <th scope="col">Email</th>
             <th scope="col">Age</th>
-            <th scope="col">PHOTO</th>
+{{--            <th scope="col">PHOTO</th>--}}
         </tr>
         </thead>
         <tbody>
         @foreach($all as $user)
             <tr>
                 <th>{{$user->id}}</th>
+                <td>{{$user->category_id}}</td>
                 <td>{{$user->name}}</td>
                 <td>{{$user->email}}</td>
                 <td>{{$user->age}}</td>
 {{--                <td>{{$user->id}}</td>--}}
-                <td>{{$user->id}}</td>
+{{--                <td>{{$user->id}}</td>--}}
             </tr>
         @endforeach
         </tbody>
