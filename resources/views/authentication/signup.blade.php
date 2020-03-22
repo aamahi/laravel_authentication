@@ -11,7 +11,7 @@
             </div>
         @endforeach
     @endif
-    <form action="{{route('reg')}}" method="post">
+    <form action="{{route('reg')}}" method="post" enctype="multipart/form-data">
         @csrf
         <div class="form-group">
             <label for="name">Name</label>
@@ -20,6 +20,15 @@
         <div class="form-group">
             <label for="email">email</label>
             <input type="email" class="form-control" id="email" name="email" placeholder="Enter email" value="{{old('email')}}">
+        </div>
+        <div class="form-group">
+            <label for="category">Category</label>
+            <select name="category_id" id="category" class="form-control">
+                <option selected disabled>Select Category </option>
+                @foreach($category as $cate)
+                <option value="{{$cate->id}}">{{$cate->category_name}}</option>
+                @endforeach
+            </select>
         </div>
         <div class="form-group">
             <label for="age">age</label>
@@ -32,6 +41,10 @@
         <div class="form-group">
             <label for="confirm_password">confirm_password</label>
             <input type="password" class="form-control" id="confirm_password" name="confirm_password" placeholder="Enter confirm_password" value="{{old('confirm_password')}}">
+        </div>
+        <div class="form-group">
+            <label for="image">Image</label>
+            <input type="file" class="form-control" id="image" name="image" >
         </div>
 
         <button type="submit" class="btn btn-primary">Signup</button>

@@ -18,7 +18,9 @@ class CreateRegistersTable extends Migration
             $table->string('name',125);
             $table->string('email',125)->unique();
             $table->string('age');
+            $table->string('category_id');
             $table->string('password',125);
+            $table->string('image',125);
             $table->timestamps();
         });
     }

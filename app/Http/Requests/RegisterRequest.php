@@ -27,8 +27,11 @@ class RegisterRequest extends FormRequest
             'name'=>'required',
             'email'=>'required | email:rfc,dns|unique:registers,email',
             'age'=>'required |max:3',
+            'category_id'=>'required',
             'password'=>'required|min:6',
             'confirm_password'=>'required|min:6|same:password',
+            'image'=>'required|image',
+
         ];
     }
 }

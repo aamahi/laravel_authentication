@@ -10,6 +10,8 @@ class register extends Model
         'name',
         'email',
         'age',
+        'category_id',
+        'image',
         'password',
 
     ];
