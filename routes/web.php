@@ -17,7 +17,12 @@ Route::get('/',"home@home")->name('home');
 
 Route::get('/reg',"authentication@register")->name('reg');
 Route::post('/reg',"authentication@signup");
+
+Route::get('/category_add',"authentication@category_add")->name('category_add');
+Route::post('/category_add',"authentication@categoryadd");
+
 Route::get('/lgin',"authentication@login")->name('lgin');
+Route::get('/all',"authentication@all")->name('all');
 
 
 
