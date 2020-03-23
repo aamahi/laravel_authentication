@@ -29,7 +29,7 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
+        <li class="nav-item">
                 <a class="nav-link" href="{{route('reg')}}"> HOME </a>
             </li>
             <li class="nav-item">
@@ -41,7 +41,6 @@
             <li class="nav-item">
                 <a class="nav-link" href="{{route('category_all')}}">All Category</a>
             </li>
-
         </ul>
         <ul class="navbar-nav ml-auto">
             <!-- Authentication Links -->
