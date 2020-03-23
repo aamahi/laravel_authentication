@@ -20,6 +20,7 @@ Route::post('/reg',"authentication@signup");
 
 Route::get('/category_add',"authentication@category_add")->name('category_add');
 Route::post('/category_add',"authentication@categoryadd");
+Route::get('/show_category/{id}',"authentication@show_category")->name('show_category');
 
 Route::get('/lgin',"authentication@login")->name('lgin');
 Route::get('/all',"authentication@all")->name('all');
